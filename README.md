@@ -48,6 +48,22 @@ To set up the project, follow these steps:
 3. **Install the required packages:**
    ```bash
    pip install -r requirements.txt
+   https://docs.fireworks.ai/getting-started/quickstart
+
+4. Aller sur https://fireworks.ai/account/api-keys
+
+   et récupérer la clé API :
+   
+fireworksAPIkeySA
+
+xxxxxxxxxxxxxxxxxxxxx
+
+
+5. Installation pré-requis manquant  :
+
+   ```bash
+   pip3 install ffprobe
+   sudo apt install ffmpeg
    ```
 
 ## Usage
@@ -55,11 +71,19 @@ To set up the project, follow these steps:
 1. **Set up API Key(s):**
    For this project, I am using LLama 3.1 405B hosted on Fireworks API as its JSON Mode supports passing a pydantic object. So, please set the API key as the `FIREWORKS_API_KEY` environment variable
 
+  ```bash
+export FIREWORKS_API_KEY="xxxxxxxxxxxxxxxxxxxxxxxxx"
+echo $FIREWORKS_API_KEY
+   ```
+
+
 2. **Run the application:**
    ```bash
    python app.py
    ```
    This will launch a Gradio interface in your web browser.
+   
+   http://127.0.0.1:7860/
 
 3. **Upload a PDF:**
    Upload the PDF document you want to convert into a podcast.
